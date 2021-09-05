@@ -11,4 +11,3 @@ class Material:
 
 		if obj:
 			self.__dict__ = obj
-		
