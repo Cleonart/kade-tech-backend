@@ -20,8 +20,14 @@ DATA_NOT_FOUND = {
 	'code' : "DATA_NOT_FOUND",
 	'msg' : "Sorry, we cannot find this material data"
 }
+
 UPDATE_SUCCESS = {
 	'code' : "Data is Inserted/Updated Successfully",
+	'msg' : "Action is completed successfully"
+}
+
+DELETE_SUCCESS = {
+	'code' : "Deleted Successfully",
 	'msg' : "Action is completed successfully"
 }
 
@@ -75,7 +81,7 @@ def material_by_id(id):
 		sql = SQLBuilder()
 		sql.delete("material").where('id = ' + str(id))
 		sql.execute()
-		return error("SUCCESS_DELETE", "Successfully delete material data")
+		return DELETE_SUCCESS
 
 @app.route('/material/type/<id>', methods=['GET'])
 def material_filter(id):
