@@ -4,8 +4,8 @@ import json
 def useTest():
 	return {
 		"host" : "localhost",
-		"user" : "admin",
-		"password" : "keredsnevets13579",
+		"user" : "<USERNAME_GOES_HERE>",
+		"password" : "<PASSWORD_GOES_HERE>",
 		"database" : "kde"
 	}
 
